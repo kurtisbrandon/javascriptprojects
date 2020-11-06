@@ -1,0 +1,156 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #222222;
+    font-size: 1.3rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #3095ba, #1fc9aa);
+    height: 100vh;
+    padding: 50px;
+}
+
+.container {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    /* background: rgba(179, 19, 19, 0.3); */
+    /* border: solid red 5px; */
+    display: inline-block;
+    position: relative;
+    left: 1px;
+}
+
+.memory-tab {
+    transition: .3s ease-in-out;
+    position: absolute;
+    display: flex;
+    writing-mode: vertical-rl;
+    align-items: flex-start;
+    justify-content: center;;
+    background-color: #2685d8;
+    border-radius: 0 15px 15px 0;
+    width: 30px;
+    height: 150px;
+    right: -30px;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.memory-tab:hover {
+    cursor: pointer;
+    width: 33px;
+    right: -33px;
+    background-color: #116ab8;
+
+}
+
+.memory-tab span {
+    position: relative;
+    left: -5;
+    color: white;
+    font-size: inherit;
+}
+
+.memory-container {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    padding: 25px;
+    border-radius: 0 15px 15px 0;
+    background: rgba(225,225,225,0.8);
+    width: 350px;
+    height: 500px;
+    right: 1px;
+    bottom: 0;
+    z-index: 2;
+}
+
+.container.open-mem {
+    left: -175px;
+}
+.container.open-mem > .memory-container {
+    right: -350px;
+}
+
+
+th {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+}
+tr {
+    width: 100%;
+    height: 30px;
+}
+td {
+    font-size: .9rem;
+
+}
+tr:hover td {
+    color: inherit;
+}
+tr:hover td:nth-child(1), 
+tr:hover td:nth-child(2) {
+    color: #116ab8;
+    cursor: pointer;
+}
+tr td:nth-child(3):hover {
+    color: rgb(199, 0, 0);
+    cursor: pointer;
+}
+
+.calculator-grid {
+    z-index: 3;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* min-height: 100vh; */
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.output {
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    grid-column: 1/-1;
+    background: rgb(34, 34, 34);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.prev-operand {
+    font-size: 1rem;
+    color: rgb(160, 160, 160);
+}
+
+.current-operand {
+    font-size: 1.5rem;
+    color: rgb(230, 230, 230);
+
+}
+
+.calculator-grid > button {
+    border: solid 1px white;
+    background: rgb(225, 225, 225);
+    cursor: pointer;
+    outline: none;
+    z-index: 3;
+}
+
+.calculator-grid > button:hover {
+    background: rgb(237, 237, 237);
+}
+
+.span-two {
+    grid-column: span 2;
+}

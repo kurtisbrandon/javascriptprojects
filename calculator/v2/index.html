@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="memory-container">
+            <div class="memory-tab"><span>Memory</span></div>
+            <table class="memory-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Monthly Rent</td>
+                    <td>700</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Insurance</td>
+                    <td>250</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Student Loans</td>
+                    <td>280</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Yearly Netflix</td>
+                    <td>245</td>
+                    <td>X</td>
+                </tr>
+            </table>
+        </div>
+        <div class="calculator-grid">
+            <div class="output">
+                <div class="prev-operand"></div>
+                <div class="current-operand"></div>
+            </div>
+            <button data-clear class="span-two">AC</button>
+            <button data-delete>DEL</button>
+            <button data-operation>÷</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button data-operation>×</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button data-operation>+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-operation>-</button>
+            <button data-number>.</button>
+            <button data-number>0</button>
+            <button data-calculate class="span-two">=</button>
+        </div>
+
+    </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
