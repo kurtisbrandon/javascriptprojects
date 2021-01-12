@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Income Tax Chart</title>
+</head>
+<body>
+   <div class="container">
+        <h4 style="margin-top: 50px; margin-bottom: 20px">Income Tax Calculator</h3>
+        <div class="row">
+            <div class="twelve columns" style="margin-bottom: 20px;">
+                <div class="chart-container" style="position: relative; height:40vh; width:100%">
+                    <canvas id="taxChart" style="border: 1px solid #D1D1D1; border-radius: 4px;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="four columns">
+                <div class="row">
+                    <input type="text" autocomplete="off" placeholder="Taxable Income" id="income">
+                </div>
+                <div class="row">
+                    <button id="submit">Calculate</button>
+                </div>
+            </div>
+            <div class="eight columns">
+                <code class="twelve columns" style="margin-bottom: 60px">
+                    <p id="output"></p>
+                </code>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="app.js"></script>
+</body>
+</html>
